@@ -79,4 +79,18 @@ public class Passenger {
         }
         return result.toString();
     }
+
+    public void printAllReservations() {
+        System.out.println("--------------------------------------------");
+        System.out.println("Reservations for passenger: " + name);
+        for (Reservation reservation : reservations) {
+            System.out.println("Reservation ID: " + reservation.getReservationID());
+            System.out.println("Flight Number: " + reservation.getFlight().getFlightNumber());
+            System.out.println("Departure Airport: " + reservation.getFlight().getDepartureAirport());
+            System.out.println("Arrival Airport: " + reservation.getFlight().getArrivalAirport());
+            System.out.println("Seat Number: " + reservation.getSeat().getSeatNumber());
+            System.out.println("Seat Class: " + reservation.getSeat().getSeatClass());
+            System.out.println();
+        }
+    }
 }

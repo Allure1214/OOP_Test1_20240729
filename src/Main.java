@@ -20,7 +20,7 @@ public class Main {
         }
 
         // Create a Passenger
-        Passenger passenger = new Passenger("John Doe", "A12345678", "john.doe@example.com", "123-456-7890");
+        Passenger passenger = new Passenger("Anthony Black", "A12345678", "cyx.black01.@gmail.com", "016-456-7890");
 
         // Find available seats
         ArrayList<Seat> availableSeats = flight.findAvailableSeats();
@@ -39,9 +39,7 @@ public class Main {
             System.out.println("Reservation failed. Seat is not available.");
         }
 
-        // Print reservation details
-        System.out.println("Passenger: " + reservation.getPassenger().getName());
-        System.out.println("Flight Number: " + reservation.getFlight().getFlightNumber());
-        System.out.println("Seat Number: " + reservation.getSeat().getSeatNumber());
+        // Print all reservation details for the passenger
+        passenger.printAllReservations();
     }
 }
